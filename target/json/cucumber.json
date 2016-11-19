@@ -1,0 +1,92 @@
+[
+  {
+    "id": "this-is-a-sample-feature-for-jdbc-template-scenarios",
+    "description": "",
+    "name": "This is a sample feature for JDBC Template scenarios",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "id": "this-is-a-sample-feature-for-jdbc-template-scenarios;query-db-with-jdbctemplate",
+        "description": "",
+        "name": "Query DB with JDBCTemplate",
+        "keyword": "Scenario",
+        "line": 9,
+        "steps": [
+          {
+            "result": {
+              "duration": 554542996,
+              "status": "passed"
+            },
+            "name": "I Configure the ASA UAT DB",
+            "keyword": "Given ",
+            "line": 10,
+            "match": {
+              "location": "JDBCSteps.configureJDBCTemplate()"
+            }
+          },
+          {
+            "result": {
+              "duration": 235188754,
+              "status": "passed"
+            },
+            "name": "I query the contractcontent table with contentid as \"324543\"",
+            "keyword": "When ",
+            "line": 11,
+            "match": {
+              "arguments": [
+                {
+                  "val": "324543",
+                  "offset": 53
+                }
+              ],
+              "location": "JDBCSteps.queryTable(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1435988,
+              "status": "passed"
+            },
+            "name": "I Should get the contractid as \"324542\"",
+            "keyword": "Then ",
+            "line": 12,
+            "match": {
+              "arguments": [
+                {
+                  "val": "324542",
+                  "offset": 32
+                }
+              ],
+              "location": "JDBCSteps.verifyContractId(String)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "comments": [
+          {
+            "value": "# Assumptions:",
+            "line": 3
+          },
+          {
+            "value": "# This scanrio runs locally. And it is a template scenario",
+            "line": 4
+          },
+          {
+            "value": "# We configure the JDBC Template to point ASA UAT DB",
+            "line": 5
+          },
+          {
+            "value": "# We make simple query to ASA ContractContent Table with ContentID",
+            "line": 6
+          },
+          {
+            "value": "# Verify the result with concerned contractID",
+            "line": 7
+          }
+        ]
+      }
+    ],
+    "uri": "JDBCTemplate.feature"
+  }
+]
